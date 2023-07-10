@@ -34,6 +34,9 @@ function App() {
           <label htmlFor="timeInterval">Time Interval (ms)</label>
         </div>
         <button onClick={handleRunner}>Click To Run</button>
+        <button onClick={()=>window.location.reload()}>Click To Stop</button>
+
+        {/* <button onClick={()=>setRunner('')}>Click To clean</button> */}
       </div>
     </>
   )

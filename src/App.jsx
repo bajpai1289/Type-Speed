@@ -47,7 +47,7 @@ function App() {
         }
       }, timeInterval);
     } catch (error) {
-      const result = `The chat gpt api failed hence using pregenreated sentence. In the cycle of life's eternal dance, Where light and shadows intertwine, Exist two companions, fate's advance, Life and death, forever entwined. Life, a fleeting bloom in vibrant hues,
+      const result = `The chat gpt api failed due to free limitation, hence using pre-generated sentence. In the cycle of life's eternal dance, Where light and shadows intertwine, Exist two companions, fate's advance, Life and death, forever entwined. Life, a fleeting bloom in vibrant hues,
       A tapestry of moments, swift and bright,
       With laughter's symphony and love's muse,
       We chase dreams beneath the starry night.`

@@ -6,7 +6,6 @@ function App() {
   
   let [runner, setRunner] = useState('')
   const [timeInterval, setTimeInterval] = useState(20);
-  const para = "Thhe sentiment of these statements is mixed. Some express frustration and negative experiences with AT&T, particularly regarding issues with technology and privacy. Others express support for Randall Stephenson's decision to resign from the PGA Tour policy board due to concerns about the tour's deal with Saudi backers. There is also mention of controversy surrounding AT&T's involvement with Liv Golf and criticism of the internet's treatment of an AT&T woman."
   const handleRunner = () => {
     let k = 0;
     const interval = setInterval(() => {
@@ -40,7 +39,7 @@ function App() {
       console.log(result);
       let k = 0;
       const interval = setInterval(() => {
-        if (k < para.length) {
+        if (k < result.length) {
           setRunner(runner => runner + result.charAt(k));
           k += 1;
         } else {
@@ -75,8 +74,6 @@ function App() {
         </div>
         <button onClick={handleRunner}>Click To Run</button>
         <button onClick={()=>window.location.reload()}>Click To Stop</button>
-
-        {/* <button onClick={()=>setRunner('')}>Click To clean</button> */}
       </div>
     </>
   )

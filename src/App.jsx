@@ -1,7 +1,7 @@
 import './App.css'
 import axios from 'axios'
 import { useState } from 'react'
-const openai_key =  process.env.open_ai_key
+const openai_key =  process.env.open_ai_key 
 function App() {
   
   let [runner, setRunner] = useState('')
@@ -9,8 +9,8 @@ function App() {
   const handleRunner = () => {
     let k = 0;
     const interval = setInterval(() => {
-      if (k < para.length) {
-        setRunner(runner => runner + para.charAt(k));
+      if (k < result.length) {
+        setRunner(runner => runner + result.charAt(k));
         k += 1;
       } else {
         clearInterval(interval);
@@ -47,7 +47,20 @@ function App() {
         }
       }, timeInterval);
     } catch (error) {
-
+      const result = `The chat gpt api failed hence using pregenreated sentence. In the cycle of life's eternal dance, Where light and shadows intertwine, Exist two companions, fate's advance, Life and death, forever entwined. Life, a fleeting bloom in vibrant hues,
+      A tapestry of moments, swift and bright,
+      With laughter's symphony and love's muse,
+      We chase dreams beneath the starry night.`
+      console.log(result);
+      let k = 0;
+      const interval = setInterval(() => {
+        if (k < result.length) {
+          setRunner(runner => runner + result.charAt(k));
+          k += 1;
+        } else {
+          clearInterval(interval);
+        }
+      }, timeInterval);
       console.error('Error:', error);
     }
   }
